@@ -1,8 +1,8 @@
 # Portfolio para Argentina Programa 2da Etapa
 Un portfolio realizado como proyecto final para la 2da Etapa de Argentina Programa: #YoProgramo 2da edición
 
-## Cómo usar 🚀
-Ingresar al proyecto con este enlace: https://codeagua.github.io/Alura-Challenge-Oracle-ONE-Encriptador-de-Texto/
+## Revisarlo 🚀
+WIP!
 
 ## Construido con 🛠️
 * Angular
