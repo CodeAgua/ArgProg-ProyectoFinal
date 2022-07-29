@@ -1,0 +1,9 @@
+.banner {
+  background:  rgb(255, 154, 82);
+  display: flex;
+}
+
+.banner_imagen {
+  opacity: 0.9;
+  width: 100%;
+}

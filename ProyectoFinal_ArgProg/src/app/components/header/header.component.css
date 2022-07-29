@@ -1,3 +1,83 @@
 .header {
-    background: chocolate;
+  background: rgb(255, 154, 82);
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2em;
+  width: auto;
+  height: 75px;
+}
+
+.header_argprog {
+  width: 205.52px;
+  height: 62.16px;
+  border: none;
+}
+
+.header_nombre {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-shadow: 5px 5px 10px rgb(241, 215, 205);
+  font-size: 35px;
+  text-align: center;
+}
+
+.header_link:hover {
+  transition: 500ms all;
+  margin-right: 0.15em;
+  margin-left: 0.15em;
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.header_github {
+  width: 40px;
+  height: 40px;
+  border-radius: 3px;
+  border: none;
+  margin: 0.2em;
+  padding: 0.1em;
+}
+
+.header_github:hover {
+  transition: 500ms all;
+  transform: scale(1.1);
+}
+
+.header_linkedin {
+  width: 44.45px;
+  height: 37.8px;
+  border: none;
+  margin: 0.2em;
+  padding: 0.1em;
+}
+
+.header_linkedin:hover {
+  transition: 500ms all;
+  transform: scale(1.1);
+}
+
+.header_links {
+  display: flex;
+}
+
+.header_boton__login {
+  margin-left: 1.4em;
+  padding: 0.5em;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background: rgb(0, 162, 255);
+  border-radius: 10px;
+  border: none;
+  transition: 1s all;
+  cursor: pointer;
+}
+
+.header_boton__login:hover {
+  background: rgb(0, 102, 255);
+  transform: scale(1.1);
+  color: rgb(39, 39, 39);
 }
