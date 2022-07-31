@@ -11,6 +11,7 @@ import { EducationComponent } from './components/education/education.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { LoginscreenComponent } from './components/loginscreen/loginscreen.component';
+import { NgCircleProgressModule } from 'node_modules/ng-circle-progress/';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,11 @@ import { LoginscreenComponent } from './components/loginscreen/loginscreen.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+
+    NgCircleProgressModule.forRoot({
+    })
+
   ],
   providers: [],
   bootstrap: [AppComponent]
