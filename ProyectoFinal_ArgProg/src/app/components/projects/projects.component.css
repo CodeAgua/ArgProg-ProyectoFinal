@@ -6,3 +6,42 @@
     padding: 0.1em;
     text-align: left;
 }
+
+.proyectos_nombre {
+    font-size: 1.4em;
+    font-family: "Barlow", sans-serif;
+    font-weight: 300;
+    margin: 0.2em;
+    padding: 0.1em;
+    text-align: center;
+}
+
+.proyectos_descripcion {
+    font-size: 1.1em;
+    font-family: "Barlow", sans-serif;
+    font-weight: 300;
+    margin: 0.2em;
+    padding: 0.1em;
+    text-align: justify;
+    text-indent: 1em;
+    line-height: 1.5em;
+}
+
+.proyectos_captura {
+    display: flex;
+    align-items: center;
+    box-shadow: 10px 10px 20px rgb(216, 104, 0);
+}
+
+.proyectos_link:hover {
+        transition: 500ms all;
+        margin-right: 0.15em;
+        margin-left: 0.15em;
+        text-decoration: none;
+        opacity: 0.9;
+}
+
+.proyectos_imagen {
+    width: 100%;
+    
+}
