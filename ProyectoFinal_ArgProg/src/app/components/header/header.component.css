@@ -4,8 +4,10 @@
   display: flex;
   justify-content: space-between;
   padding: 0.2em;
+  margin-bottom: 0.8em;
   width: auto;
   height: 55px;
+  box-shadow: inset;
 }
 
 .header_argprog {

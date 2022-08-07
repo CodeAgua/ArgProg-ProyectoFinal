@@ -39,6 +39,7 @@
         margin-left: 0.15em;
         text-decoration: none;
         opacity: 0.9;
+        cursor: pointer;
 }
 
 .proyectos_imagen {

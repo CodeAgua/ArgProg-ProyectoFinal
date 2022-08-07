@@ -2,14 +2,16 @@
     display: flex;
     width: auto;
     height: 50px;
-    justify-content:end;
+    justify-content: flex-end;
+    margin-top: 1em;
 }
 
 .footer_texto {
+    display: flex;
     font-size: 1.1em;
     font-family: "Barlow", sans-serif;
     font-weight: 300;
-    margin: 0.2em;
+    margin: 0.2em 0.2em 0.5em 0.2em;
     padding: 0.1em;
     text-align: justify;
     text-shadow: 5px 5px 10px black;
