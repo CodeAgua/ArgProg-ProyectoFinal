@@ -1,3 +1,12 @@
+.login_titulo{
+  font-size: 1.3em;
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  margin: 0.2em;
+  padding: 0.1em;
+  text-align: justify;
+}
+
 .form {
   margin: 2em 0;
 }
@@ -32,10 +41,28 @@ form label {
 .form_cuadro {
   font-size: 1.1em;
   font-family: "Barlow", sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   margin: 0.2em;
   padding: 0.1em;
   text-align: justify;
+}
+
+.form_cuadro_valido {
+  border-color: green;
+  border-style: outset;
+  border-width: 0.2em;
+}
+
+.form_cuadro_error {
+  border-color: red;
+  border-style: outset;
+  border-width: 0.2em;
+}
+
+.form_cuadro_aviso {
+  display: flex;
+  color: red;
+  font-size: 0.9em;
 }
 
 .form_input {
@@ -43,8 +70,14 @@ form label {
   width: 50%;
   font-size: 1.1em;
   font-family: "Barlow", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   margin: 0.2em;
   padding: 0.1em;
   text-align: justify;
+}
+
+@media only screen and (max-width: 600px) {
+  .form_input {
+    width: 75%;
+}
 }
