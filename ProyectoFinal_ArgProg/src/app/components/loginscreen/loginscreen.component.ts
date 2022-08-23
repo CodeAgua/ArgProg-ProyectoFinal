@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
 
 @Component({
   selector: 'app-loginscreen',
@@ -8,7 +10,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class LoginscreenComponent implements OnInit {
   form:FormGroup;
-  constructor(private formBuilder:FormBuilder) {
+  constructor(private formBuilder:FormBuilder, private autenticacionService:AutenticacionService, private ruta:Router) {
     this.form=this.formBuilder.group(
       {
         email:['',[Validators.required, Validators.email]],
@@ -35,4 +37,35 @@ export class LoginscreenComponent implements OnInit {
     return this.form.get('password');
   }
 
+  onEnviar(event:Event) {
+    event.preventDefault;
+    this.autenticacionService.IniciarSesion(this.form.value).subscribe(data=>{
+      console.log("DATA " + JSON.stringify(data));
+      this.ruta.navigate(['/portfolio']);
+    })
+  }
+
+  
+  /*
+  ESTO ES PARA EL MODEL USUARIO
+  export class usuario {
+    id?: number;
+    nombre: string;
+    apellido: string;
+    img: string;
+
+    constructor(nombre:String, apellido:String, img:String){
+      this.nombre=nombre;
+      this.apellido=apellido;
+      this.img=img;
+    }
+    
+    ESTO ES PARA EL SERVICE USUARIO
+    url="http://localhost:8080/";
+    
+    constructor(private http:HttpClient) { }
+    public verUsuarios(): Observable<usuario>{
+       return this.http.get<usuario>(this.URL+ '/ver/usuarios');
+    }
+    */
 }

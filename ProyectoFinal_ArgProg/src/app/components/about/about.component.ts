@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-
-  constructor() { }
+  /*usuario: usuario = new usuario("", "", "");*/
+  constructor(/*public usuarioService: UsuarioService*/) { }
 
   ngOnInit(): void {
+    /*this.usuarioService.getUsuario().subscribe(data => {this.usuario = data})*/
   }
 
 }
