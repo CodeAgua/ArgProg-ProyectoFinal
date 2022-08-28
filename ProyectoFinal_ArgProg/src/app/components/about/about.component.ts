@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { usuario } from 'src/app/model/usuario.model';
+import { UsuarioService } from 'src/app/servicios/usuario.service';
 
 @Component({
   selector: 'app-about',
@@ -6,11 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  /*usuario: usuario = new usuario("", "", "");*/
-  constructor(/*public usuarioService: UsuarioService*/) { }
+  usuario: usuario = new usuario("", "", "");
+  
+  constructor(public usuarioServ: UsuarioService) { }
 
   ngOnInit(): void {
-    /*this.usuarioService.getUsuario().subscribe(data => {this.usuario = data})*/
+    this.usuarioServ.verUsuarios().subscribe(data => {this.usuario = data});
   }
 
 }
