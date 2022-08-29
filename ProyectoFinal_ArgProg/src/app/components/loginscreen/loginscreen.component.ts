@@ -12,7 +12,7 @@ import { TokenService } from 'src/app/servicios/token.service';
   styleUrls: ['./loginscreen.component.css']
 })
 
-export class LoginComponent implements OnInit {
+export class LoginscreenComponent implements OnInit {
   
   isLogged = false;
   isLogginFail = false;
@@ -28,11 +28,6 @@ export class LoginComponent implements OnInit {
         {
           email:['',[Validators.required, Validators.email]],
           password:['',[Validators.required, Validators.minLength(8)]],
-          deviceInfo:this.formBuilder.group({
-            deviceId:["17867868768"],
-            deviceType:["DEVICE_TYPE_ANDROID"],
-            notificationToken:["67657575eececc34"]
-          })
         }
       )
     }
@@ -64,9 +59,9 @@ export class LoginComponent implements OnInit {
       })
   }
 
-  get Email()
+  get NombreUsuario()
   {
-    return this.form.get('email');
+    return this.form.get('nombreUsuario');
   }
 
   get Password()

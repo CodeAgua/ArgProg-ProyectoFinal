@@ -1,16 +1,16 @@
 <h1 class="login_titulo">Iniciar Sesión</h1>
-<form [formGroup]="form" class="form" (ngSubmit)="onEnviar($event)">
+<form [formGroup]="form" class="form" (ngSubmit)="onLogin()">
 
   <div class="form_cuadro">
     <label for="colocarCorreo">Correo Electrónico</label>
-    <input type="email" formControlName="email"
-      [ngClass]="{'form_cuadro_error': Email?.errors && Email?.touched, 'form_cuadro_valido': !Email?.errors && Email?.touched}"
-      class="form_input" id="colocarCorreo" aria-describedby="emailHelp" placeholder="correo@mail.com">
-    <div *ngIf="Email?.errors && Email?.touched">
-      <p *ngIf="Email?.hasError('required')" class="form_cuadro_aviso">
+    <input type="NombreUsuario" formControlName="NombreUsuario"
+      [ngClass]="{'form_cuadro_error': NombreUsuario?.errors && NombreUsuario?.touched, 'form_cuadro_valido': !NombreUsuario?.errors && NombreUsuario?.touched}"
+      class="form_input" id="colocarCorreo" aria-describedby="NombreUsuarioHelp" placeholder="correo@mail.com">
+    <div *ngIf="NombreUsuario?.errors && NombreUsuario?.touched">
+      <p *ngIf="NombreUsuario?.hasError('required')" class="form_cuadro_aviso">
         El E-mail es requerido.
       </p>
-      <p *ngIf="Email?.hasError('email')" class="form_cuadro_aviso">
+      <p *ngIf="NombreUsuario?.hasError('NombreUsuario')" class="form_cuadro_aviso">
         El formato del E-mail debe ser válido (nombre@mail.com)
       </p>
     </div>

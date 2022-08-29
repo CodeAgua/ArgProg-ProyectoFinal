@@ -16,6 +16,7 @@ import { NgCircleProgressModule } from 'node_modules/ng-circle-progress/';
 import { FooterComponent } from './components/footer/footer.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { HttpClientModule } from '@angular/common/http';
+import { interceptorProvider } from './servicios/interceptor-service';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,9 @@ import { HttpClientModule } from '@angular/common/http';
     })
 
   ],
-  providers: [],
+  providers: [
+    interceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
