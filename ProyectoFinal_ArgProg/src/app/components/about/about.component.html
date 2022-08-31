@@ -2,8 +2,8 @@
     <div>
         <img class="about_fotop" src="../../../assets/fotoPerfil.jpg" alt="Foto personal para presentación">
     </div>
-    <div class="about_nombre-titulo">
-        <p class="about_nombre">{{usuario.nombre}} {{usuario.apellido}} </p>
+    <div *ngIf="usuario" class="about_nombre-titulo">
+        <p class="about_nombre"> {{usuario.nombre}} {{usuario.apellido}} </p>
         <p class="about_titulo">Full Stack Developer Jr</p>
     </div>
     <div class="about_acercade">

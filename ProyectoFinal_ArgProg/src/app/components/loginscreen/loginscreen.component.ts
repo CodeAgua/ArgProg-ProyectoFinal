@@ -17,7 +17,7 @@ export class LoginscreenComponent implements OnInit {
   isLogged = false;
   isLogginFail = false;
   loginUsuario!: LoginUsuario;
-  nombreUsuario!: string;
+  email!: string;
   password! : string;
   roles: string[] = [];
   errMsj!: string;
@@ -41,12 +41,12 @@ export class LoginscreenComponent implements OnInit {
   }
 
   onLogin(): void{
-    this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.password); 
+    this.loginUsuario = new LoginUsuario(this.email, this.password); 
     this.authService.login(this.loginUsuario).subscribe(data =>{
         this.isLogged = true;
         this.isLogginFail = false;
         this.tokenService.setToken(data.token);
-        this.tokenService.setUserName(data.nombreUsuario);
+        this.tokenService.setEmail(data.email);
         this.tokenService.setAuthorities(data.authorities);
         this.roles = data.authorities;
         this.router.navigate([''])
@@ -59,9 +59,9 @@ export class LoginscreenComponent implements OnInit {
       })
   }
 
-  get NombreUsuario()
+  get Email()
   {
-    return this.form.get('nombreUsuario');
+    return this.form.get('email');
   }
 
   get Password()
