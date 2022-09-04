@@ -1,35 +1,16 @@
 <h1 class="login_titulo">Iniciar Sesión</h1>
-<form [formGroup]="form" class="form" (ngSubmit)="onLogin()">
+<form #f="ngForm" class="form" (ngSubmit)="onLogin()" novalidate>
 
   <div class="form_cuadro">
-    <label for="colocarCorreo">Correo Electrónico</label>
-    <input type="email" formControlName="email"
-      [ngClass]="{'form_cuadro_error': Email?.errors && Email?.touched, 'form_cuadro_valido': !Email?.errors && Email?.touched}"
-      class="form_input" id="colocarCorreo" aria-describedby="EmailHelp" placeholder="correo@mail.com">
-    <div *ngIf="Email?.errors && Email?.touched">
-      <p *ngIf="Email?.hasError('required')" class="form_cuadro_aviso">
-        El E-mail es requerido.
-      </p>
-      <p *ngIf="Email?.hasError('Email')" class="form_cuadro_aviso">
-        El formato del E-mail debe ser válido (nombre@mail.com)
-      </p>
-    </div>
+    <label for="colocarUsername">Nombre de usuario</label>
+    <input class="form_input" id="colocarUsername" placeholder="XentoAsfi">
   </div>
 
   <div class="form_cuadro">
     <label for="colocarPassword">Contraseña</label>
-    <input type="password" formControlName="password"
-      [ngClass]="{'form_cuadro_error': Password?.errors && Password?.touched,
-       'form_cuadro_valido': !Password?.errors && Password?.touched}"
-      class="form_input" id="colocarPassword" placeholder="********">
-    <div *ngIf="Password?.errors && Password?.touched">
-      <p *ngIf="Password?.hasError('required')" class="form_cuadro_aviso">
-        La contraseña es requerida.
-      </p>
-      <p *ngIf="Password?.errors?.['minlength']" class="form_cuadro_aviso">
-        La contraseña debe ser de 8 o más caracteres (********)
-      </p>
-    </div>
+    <input type="password" class="form_input" id="colocarPassword" placeholder="********">
   </div>
-  <button type="submit" class="form_boton">Enviar</button>
+
+  <button class="form_boton" type="submit">Enviar</button>
+
 </form>

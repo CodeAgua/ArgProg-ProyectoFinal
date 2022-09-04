@@ -9,15 +9,15 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
   providedIn: 'root'
 })
 export class AuthService {
-  authUrl = 'http://localhost:8000/auth/';
+  authUrl = 'http://localhost:8080/auth';
 
   constructor(private httpClient: HttpClient) { }
 
  public nuevo(nuevoUsuario: NuevoUsuario): Observable<any>{
-   return this.httpClient.post<any>(this.authUrl + 'new', nuevoUsuario);
+   return this.httpClient.post<any>(this.authUrl + '/nuevo', nuevoUsuario);
  }
 
  public login(loginUsuario: LoginUsuario): Observable<JwtDto>{
-   return this.httpClient.post<JwtDto>(this.authUrl + 'login', loginUsuario)
+   return this.httpClient.post<JwtDto>(this.authUrl + '/login', loginUsuario)
  }
 }

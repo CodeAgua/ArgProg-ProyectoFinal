@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { usuario } from 'src/app/model/usuario.model';
-import { UsuarioService } from 'src/app/servicios/usuario.service';
+import { persona } from 'src/app/model/persona.model';
+import { PersonaService } from 'src/app/servicios/persona.service';
 
 @Component({
   selector: 'app-about',
@@ -8,12 +8,12 @@ import { UsuarioService } from 'src/app/servicios/usuario.service';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  usuario: usuario = new usuario("", "", "");
+  persona: persona = new persona("","","");
   
-  constructor(public usuarioServ: UsuarioService) { }
+  constructor(public personaService: PersonaService) { }
 
   ngOnInit(): void {
-    this.usuarioServ.verUsuarios().subscribe(data => {this.usuario = data});
+    this.personaService.getPersona().subscribe(data => {this.persona = data})
   }
 
 }

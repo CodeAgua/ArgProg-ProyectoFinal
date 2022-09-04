@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { BannerComponent } from './components/banner/banner.component';
@@ -15,7 +16,7 @@ import { LoginscreenComponent } from './components/loginscreen/loginscreen.compo
 import { NgCircleProgressModule } from 'node_modules/ng-circle-progress/';
 import { FooterComponent } from './components/footer/footer.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
-import { HttpClientModule } from '@angular/common/http';
+
 import { interceptorProvider } from './servicios/interceptor-service';
 
 @NgModule({
