@@ -2,13 +2,13 @@
 <form #f="ngForm" class="form" (ngSubmit)="onLogin()" novalidate>
 
   <div class="form_cuadro">
-    <label for="colocarUsername">Nombre de usuario</label>
-    <input class="form_input" id="colocarUsername" placeholder="XentoAsfi">
+    <label for="nombreUsuario">Nombre de usuario</label>
+    <input type="text" class="form_input" id="nombreUsuario" placeholder="XentoAsfi" name="nombreUsuario" required>
   </div>
 
   <div class="form_cuadro">
-    <label for="colocarPassword">Contraseña</label>
-    <input type="password" class="form_input" id="colocarPassword" placeholder="********">
+    <label for="password">Contraseña</label>
+    <input type="password" class="form_input" id="password" placeholder="********" name="password" required>
   </div>
 
   <button class="form_boton" type="submit">Enviar</button>

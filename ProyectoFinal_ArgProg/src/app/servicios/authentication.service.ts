@@ -11,13 +11,13 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
 export class AuthService {
   authUrl = 'http://localhost:8080/auth';
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpC: HttpClient) { }
 
  public nuevo(nuevoUsuario: NuevoUsuario): Observable<any>{
-   return this.httpClient.post<any>(this.authUrl + '/nuevo', nuevoUsuario);
+   return this.httpC.post<any>(this.authUrl + '/nuevo', nuevoUsuario);
  }
 
  public login(loginUsuario: LoginUsuario): Observable<JwtDto>{
-   return this.httpClient.post<JwtDto>(this.authUrl + '/login', loginUsuario)
+   return this.httpC.post<JwtDto>(this.authUrl + '/login', loginUsuario)
  }
 }
