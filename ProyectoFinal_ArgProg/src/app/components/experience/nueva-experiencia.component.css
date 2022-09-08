@@ -1,0 +1,56 @@
+.nombre_exp {
+  font-size: 1.4em;;
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
+  margin: 0.2em;
+  padding: 0.1em;
+  text-align: left;
+}
+
+.nombre_input {
+  font-size: 1.2em;
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
+  margin: 0.2em;
+  padding: 0.1em;
+  text-align: left;
+}
+
+.descrp_exp {
+  font-size: 1.2em;
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
+  margin: 0.2em;
+  padding: 0.1em;
+  text-align: left;
+}
+
+.descrp_input {
+  font-size: 1.2em;
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
+  margin: 0.2em;
+  padding: 0.1em;
+  text-align: left;
+}
+
+.boton_agregar {
+  margin-left: 1.4em;
+  padding: 0.5em;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background: rgb(0, 162, 255);
+  border-radius: 10px;
+  border: none;
+  transition: 1s all;
+  cursor: pointer;
+}
+
+.boton_agregar:hover {
+  background: rgb(0, 102, 255);
+  transform: scale(1.1);
+  color: rgb(39, 39, 39);
+}

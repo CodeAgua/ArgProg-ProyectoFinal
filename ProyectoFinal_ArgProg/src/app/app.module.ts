@@ -18,6 +18,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 
 import { interceptorProvider } from './servicios/interceptor-service';
+import { NuevaExperienciaComponent } from './components/experience/nueva-experiencia.component';
+import { EditExperienciaComponent } from './components/experience/edit-experiencia.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { interceptorProvider } from './servicios/interceptor-service';
     ProjectsComponent,
     LoginscreenComponent,
     FooterComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    NuevaExperienciaComponent,
+    EditExperienciaComponent
   ],
   imports: [
     BrowserModule,
