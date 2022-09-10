@@ -2,12 +2,12 @@
     <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
 
         <div>
-            <label class="nombre_exp" for="nombreE">Nombre de la empresa</label>
+            <label class="nombre_edu" for="nombreE">Nombre de la Institución Educativa</label>
             <input class="nombre_input" type="text" id="nombreE" name="nombreE" [(ngModel)]="nombreE" required>
         </div>
 
         <div>
-            <label class="descrp_exp" for="descripcionE">Descripción de la tarea</label>
+            <label class="descrp_edu" for="descripcionE">Descripción de la carrera o curso</label>
             <input class="descrp_input" type="text" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE" required>
         </div>
 

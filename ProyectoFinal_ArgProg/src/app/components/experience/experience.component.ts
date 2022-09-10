@@ -11,14 +11,14 @@ import { TokenService } from 'src/app/servicios/token.service';
 export class ExperienceComponent implements OnInit {
   exp: Experiencia[] = [];
 
-  constructor(private sExperiencia: SExperienciaService, private tokenService: TokenService) { }
+  constructor(private sExperiencia: SExperienciaService, private tokenServ: TokenService) { }
 
   isLogged = false;
 
   ngOnInit(): void {
     this.cargarExperiencia();
     
-    if(this.tokenService.getToken()) {
+    if(this.tokenServ.getToken()) {
       this.isLogged=true;
     } else {
       this.isLogged=false;

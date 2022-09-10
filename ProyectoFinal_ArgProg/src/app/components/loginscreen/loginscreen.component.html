@@ -1,14 +1,31 @@
 <h1 class="login_titulo">Iniciar Sesión</h1>
-<form #f="ngForm" (ngSubmit)="onLogin()" class="form" novalidate>
+<form [formGroup]="form" #f="ngForm" (ngSubmit)="onLogin()" class="form">
 
   <div class="form_cuadro">
     <label for="nombreUsuario">Nombre de usuario</label>
-    <input type="user" id="nombreUsuario" name="nombreUsuario" [(ngModel)]="nombreUsuario" class="form_input" placeholder="XentoAsfi" required>
+    <input type="user" formControlName="nombreUsuario"
+      [ngClass]="{'form_cuadro_error': Username?.errors && Username?.touched, 'form_cuadro_valido': !Username?.errors && Username?.touched}"
+      id="nombreUsuario" name="nombreUsuario" [(ngModel)]="nombreUsuario" class="form_input"
+      aria-describedby="UsernameHelp" placeholder="XentoAsfi" required>
+
+    <div *ngIf="Username?.errors && Username?.touched">
+      <p *ngIf="Username?.hasError('required')" class="form_cuadro_aviso">El nombre de usuario es requerido.</p>
+      <p *ngIf="Password?.errors?.['minlength']" class="form_cuadro_aviso">El nombre de usuario debe ser de 1 o más
+        caracteres.</p>
+    </div>
   </div>
+
 
   <div class="form_cuadro">
     <label for="password">Contraseña</label>
-    <input type="password" id="password" name="password" [(ngModel)]="password" class="form_input" placeholder="********"  required>
+    <input type="password" formControlName="password" [ngClass]="{'form_cuadro_error': Password?.errors && Password?.touched,
+'form_cuadro_valido': !Password?.errors && Password?.touched}" id="password" name="password" [(ngModel)]="password"
+      class="form_input" placeholder="********" required>
+
+    <div *ngIf="Password?.errors && Password?.touched">
+      <p *ngIf="Password?.hasError('required')" class="form_cuadro_aviso">La contraseña es requerida.</p>
+      <p *ngIf="Password?.errors?.['minlength']" class="form_cuadro_aviso">La contraseña debe ser de 1 o más caracteres(*)</p>
+    </div>
   </div>
 
   <button class="form_boton" type="submit">Enviar</button>

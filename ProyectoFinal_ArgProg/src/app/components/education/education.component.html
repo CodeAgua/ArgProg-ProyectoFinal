@@ -3,23 +3,24 @@
         <h1 class="educacion_titulo">Educación</h1>
     </div>
 
-    <div class="educaciones">
-        <ul class="educacion">
-            <li class="educacion_item">
-                <p>Estudio 1</p>
-                <p>Años</p>
-                <p>Descripción</p>
-            </li>
-            <li class="educacion_item">
-                <p>Estudio 2</p>
-                <p>Años</p>
-                <p>Descripción</p>
-            </li>
-            <li class="educacion_item">
-                <p>Estudio 3</p>
-                <p>Años</p>
-                <p>Descripción</p>
-            </li>
-        </ul>
+    <div>
+        <button class="boton_agregar__edu" routerLink="/nuevaedu" *ngIf="isLogged"><i class="fa-solid fa-plus"></i>
+            Nueva Educación</button>
     </div>
+
+    <table class="tabla_educaciones">
+        <tbody>
+            <tr *ngFor="let Educacion of edu">
+                <td class="edu_nombre">{{Educacion.nombreE}}</td>
+                <td class="edu_descrp">{{Educacion.descripcionE}}</td>
+                <td *ngIf="isLogged">
+                    <button class="boton_editar__edu" routerLink="/editedu/{{Educacion.id}}">
+                        <i class="fa-solid fa-pen-to-square"></i>Editar</button>
+                </td>
+                <td *ngIf="isLogged">
+                    <button class="boton_borrar__edu" (click)="delete(Educacion.id)">
+                        <i class="fa-solid fa-trash"></i>Borrar</button>
+            </tr>
+        </tbody>
+    </table>
 </section>

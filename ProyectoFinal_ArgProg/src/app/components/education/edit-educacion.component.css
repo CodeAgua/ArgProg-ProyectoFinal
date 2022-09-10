@@ -1,4 +1,4 @@
-.nombre_exp {
+.nombre_edu {
   font-size: 1.4em;
   font-family: "Barlow", sans-serif;
   font-weight: 300;
@@ -16,7 +16,7 @@
   text-align: left;
 }
 
-.descrp_exp {
+.descrp_edu {
   font-size: 1.2em;
   font-family: "Barlow", sans-serif;
   font-weight: 300;
@@ -34,7 +34,7 @@
   text-align: left;
 }
 
-.boton_agregar {
+.boton_editar {
   margin-left: 1.4em;
   padding: 0.5em;
   font-size: 18px;
@@ -49,7 +49,7 @@
   cursor: pointer;
 }
 
-.boton_agregar:hover {
+.boton_editar:hover {
   background: rgb(0, 102, 255);
   transform: scale(1.1);
   color: rgb(39, 39, 39);

@@ -20,6 +20,8 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { interceptorProvider } from './servicios/interceptor-service';
 import { NuevaExperienciaComponent } from './components/experience/nueva-experiencia.component';
 import { EditExperienciaComponent } from './components/experience/edit-experiencia.component';
+import { EditEducacionComponent } from './components/education/edit-educacion.component';
+import { NuevaEducacionComponent } from './components/education/nueva-educacion.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { EditExperienciaComponent } from './components/experience/edit-experienc
     FooterComponent,
     PortfolioComponent,
     NuevaExperienciaComponent,
-    EditExperienciaComponent
+    EditExperienciaComponent,
+    EditEducacionComponent,
+    NuevaEducacionComponent
   ],
   imports: [
     BrowserModule,

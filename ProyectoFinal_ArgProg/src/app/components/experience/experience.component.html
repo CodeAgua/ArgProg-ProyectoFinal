@@ -15,32 +15,12 @@
                 <td class="exp_descrp">{{Experiencia.descripcionE}}</td>
                 <td *ngIf="isLogged">
                     <button class="boton_editar__exp" routerLink="/editexp/{{Experiencia.id}}">
-                        <i class="fa-solid fa-pen-to-square"></i>Editar Experiencia</button>
+                        <i class="fa-solid fa-pen-to-square"></i>Editar</button>
                 </td>
                 <td *ngIf="isLogged">
                     <button class="boton_borrar__exp" (click)="delete(Experiencia.id)">
-                        <i class="fa-solid fa-trash"></i>Borrar Experiencia</button>
+                        <i class="fa-solid fa-trash"></i>Borrar</button>
             </tr>
         </tbody>
     </table>
-
-    <div class="tabla_experiencias">
-        <ul class="experiencia">
-            <li class="experiencia_item">
-                <p>Trabajo 1</p>
-                <p>Años</p>
-                <p>Descripción</p>
-            </li>
-            <li class="experiencia_item">
-                <p>Trabajo 2</p>
-                <p>Años</p>
-                <p>Descripción</p>
-            </li>
-            <li class="experiencia_item">
-                <p>Trabajo 3</p>
-                <p>Años</p>
-                <p>Descripción</p>
-            </li>
-        </ul>
-    </div>
 </section>
