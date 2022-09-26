@@ -1,21 +1,84 @@
 .skills_titulo {
-    font-size: 1.4em;
-    font-family: "Barlow", sans-serif;
-    font-weight: 700;
-    margin: 0.2em;
-    padding: 0.1em;
-    text-align: center;
+  font-size: 1.4em;
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  margin: 0.2em;
+  padding: 0.1em;
+  text-align: center;
 }
 
 .skills {
-    display: flex;
-    flex-wrap: wrap;
-    width: auto;
-    align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: auto;
+  align-items: center;
 }
 
 .skills_box {
-    width: 32%;
-    margin: 0.2em;
-    padding: 0.2em;
+  width: 32%;
+  margin: 0.2em;
+  padding: 0.2em;
+}
+
+.boton_agregar__skl {
+  margin-left: 1.4em;
+  padding: 0.5em;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background: rgb(0, 162, 255);
+  border-radius: 10px;
+  border: none;
+  transition: 1s all;
+  cursor: pointer;
+}
+
+.boton_agregar__skl:hover {
+  background: rgb(0, 102, 255);
+  transform: scale(1.1);
+  color: rgb(39, 39, 39);
+}
+
+.boton_editar__skl {
+  margin-left: 1.4em;
+  padding: 0.5em;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background: rgb(0, 162, 255);
+  border-radius: 10px;
+  border: none;
+  transition: 1s all;
+  cursor: pointer;
+}
+
+.boton_editar__skl:hover {
+  background: rgb(0, 102, 255);
+  transform: scale(1.1);
+  color: rgb(39, 39, 39);
+}
+
+.boton_borrar__skl {
+  margin-left: 1.4em;
+  padding: 0.5em;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background: rgb(177, 9, 9);
+  border-radius: 10px;
+  border: none;
+  transition: 1s all;
+  cursor: pointer;
+}
+
+.boton_borrar__skl:hover {
+  background: rgb(196, 0, 0);
+  transform: scale(1.1);
+  color: rgb(39, 39, 39);
 }

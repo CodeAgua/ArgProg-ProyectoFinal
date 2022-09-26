@@ -6,6 +6,8 @@ import { EditExperienciaComponent } from './components/experience/edit-experienc
 import { NuevaExperienciaComponent } from './components/experience/nueva-experiencia.component';
 import { LoginscreenComponent } from './components/loginscreen/loginscreen.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { EditSkillComponent } from './components/skills/edit-skill.component';
+import { NewSkillComponent } from './components/skills/new-skill.component';
 
 const routes: Routes = [
   {path: 'portfolio', component:PortfolioComponent},
@@ -14,6 +16,8 @@ const routes: Routes = [
   {path: 'editexp/:id', component:EditExperienciaComponent},
   {path: 'nuevaedu', component:NuevaEducacionComponent},
   {path: 'editedu/:id', component:EditEducacionComponent},
+  {path: 'nuevaskill', component:NewSkillComponent},
+  {path: 'editskill/:id', component:EditSkillComponent},
   {path: '', redirectTo:'login', pathMatch:'full'}
 ];
 
