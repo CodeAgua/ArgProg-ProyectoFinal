@@ -33,22 +33,46 @@
     box-shadow: 10px 10px 20px rgb(216, 104, 0);
 }
 
-.proyectos_demo:hover {
-        transition: 500ms all;
-        margin-right: 0.15em;
-        margin-left: 0.15em;
-        text-decoration: none;
-        opacity: 0.9;
-        cursor: pointer;
+.proyectos_demo{
+  margin-left: 0.4em;
+  padding: 0.5em;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background: rgb(0, 162, 255);
+  border-radius: 10px;
+  border: none;
+  transition: 1s all;
+  cursor: pointer;
+}
+
+.proyectos_demo:hover { 
+    background: rgb(0, 102, 255);
+    transform: scale(1.1);
+    color: rgb(39, 39, 39);
+}
+
+.proyectos_repo{
+  margin-left: 0.4em;
+  padding: 0.5em;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background: rgb(74, 201, 0);
+  border-radius: 10px;
+  border: none;
+  transition: 1s all;
+  cursor: pointer;
 }
 
 .proyectos_repo:hover {
-    transition: 500ms all;
-    margin-right: 0.15em;
-    margin-left: 0.15em;
-    text-decoration: none;
-    opacity: 0.9;
-    cursor: pointer;
+    background: rgb(66, 180, 0);
+    transform: scale(1.1);
+    color: rgb(39, 39, 39);
 }
 
 .proyectos_imagen {

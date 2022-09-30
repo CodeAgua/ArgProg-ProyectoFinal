@@ -1,3 +1,8 @@
-<div class="banner">
-    <img class="banner_imagen" src="../../../assets/BannerProvisorioArgProg.png" alt="Banner de Argentina Programa">
+<div class="banner" *ngFor="let Banner of banner">
+    <img class="banner_imagen" alt="Banner de Argentina Programa" src=`{{Banner.urlimg}}`>
+
+    <td *ngIf="isLogged">
+        <button class="boton_editar__banner" routerLink="/editbanner/{{Banner.id}}">
+            <i class="fa-solid fa-pen-to-square"></i></button>
+    </td>
 </div>
