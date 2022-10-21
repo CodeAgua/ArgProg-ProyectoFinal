@@ -1,30 +1,31 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Banner } from 'src/app/model/banner';
-import { BannerService } from 'src/app/servicios/banner.service';
+import { persona } from 'src/app/model/persona.model';
+import { PersonaService } from 'src/app/servicios/persona.service';
 
 @Component({
-  selector: 'app-edit-banner',
-  templateUrl: './edit-banner.component.html',
-  styleUrls: ['./edit-banner.component.css']
+  selector: 'app-editabout',
+  templateUrl: './editabout.component.html',
+  styleUrls: ['./editabout.component.css']
 })
-export class EditBannerComponent implements OnInit {
-  banner: Banner = null;
+export class EditaboutComponent implements OnInit {
+  
+  pers: persona = null;
 
   constructor(
-    private bannerServ: BannerService,
+    private personaServ: PersonaService,
     private activeRoute: ActivatedRoute,
     private router: Router
   ) { }
 
   ngOnInit(): void {
     const id = this.activeRoute.snapshot.params['id'];
-    this.bannerServ.detail(id).subscribe(
+    this.personaServ.detail(id).subscribe(
       (data) => {
-        this.banner = data;
+        this.pers = data;
       },
       (err) => {
-        alert("No se pudo modificar el banner.");
+        alert("No se pudo modificar la persona.");
         this.router.navigate(['/portfolio']);
       }
     );
@@ -32,12 +33,12 @@ export class EditBannerComponent implements OnInit {
 
   onUpdate(): void {
     const id = this.activeRoute.snapshot.params['id'];
-    this.bannerServ.update(id, this.banner).subscribe(
+    this.personaServ.update(id, this.pers).subscribe(
       (data) => {
         this.router.navigate(['/portfolio']);
       },
       (err) => {
-        alert("No se pudo modificar el banner.");
+        alert("No se pudo modificar la persona.");
         this.router.navigate(['/portfolio']);
       }
     );

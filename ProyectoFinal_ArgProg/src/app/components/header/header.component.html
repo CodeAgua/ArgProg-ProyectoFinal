@@ -11,8 +11,8 @@
             <img class="header_linkedin" src="../../../assets/LinkedinBug.png" alt="Logo de LinkedIn">
         </a>
             <div class="header_boton">
-                <button type="button" class="header_boton__login"  (click)="login()" *ngIf="!isLogged">Ingresar</button>
-                <button type="button" class="header_boton__login" (click)="onLogOut()" *ngIf="isLogged">Cerrar Sesión</button>
+                <button type="button" class="header_boton__login"  (click)="login()" *ngIf="!isLogged"><i class="fa-solid fa-arrow-right-to-bracket"></i> Ingresar</button>
+                <button type="button" class="header_boton__login" (click)="onLogOut()" *ngIf="isLogged"><i class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar Sesión</button>
             </div>
     </div>
 </header>

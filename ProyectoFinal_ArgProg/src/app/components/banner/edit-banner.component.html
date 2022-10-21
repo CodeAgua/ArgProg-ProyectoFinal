@@ -1,1 +1,14 @@
-<p>edit-banner works!</p>
+<div *ngIf="banner">
+    <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+
+        <div>
+            <label class="urlimg_banner" for="urlimg"><i class="fa-solid fa-link"></i>Enlace de la imagen</label>
+            <input class="urlimg_input" type="text" id="urlimg" name="urlimg" [(ngModel)]="banner.urlimg" required>
+        </div>
+
+        <button class="boton_editar"><i class="fa-solid fa-pen-to-square"></i>Editar</button>
+        <button routerLink="/portfolio" class="boton_cancelar"><i class="fa-regular fa-circle-xmark"></i>Cancelar</button>
+    </form>
+
+    
+</div>

@@ -2,7 +2,7 @@
 <form [formGroup]="form" #f="ngForm" (ngSubmit)="onLogin()" class="form">
 
   <div class="form_cuadro">
-    <label for="nombreUsuario">Nombre de usuario</label>
+    <label for="nombreUsuario"><i class="fa-solid fa-circle-user"></i>Nombre de usuario</label>
     <input type="user" formControlName="nombreUsuario"
       [ngClass]="{'form_cuadro_error': Username?.errors && Username?.touched, 'form_cuadro_valido': !Username?.errors && Username?.touched}"
       id="nombreUsuario" name="nombreUsuario" [(ngModel)]="nombreUsuario" class="form_input"
@@ -17,7 +17,7 @@
 
 
   <div class="form_cuadro">
-    <label for="password">Contraseña</label>
+    <label for="password"><i class="fa-solid fa-key"></i>Contraseña</label>
     <input type="password" formControlName="password" [ngClass]="{'form_cuadro_error': Password?.errors && Password?.touched,
 'form_cuadro_valido': !Password?.errors && Password?.touched}" id="password" name="password" [(ngModel)]="password"
       class="form_input" placeholder="********" required>
@@ -28,6 +28,7 @@
     </div>
   </div>
 
-  <button class="form_boton" type="submit">Enviar</button>
-
+  <button class="form_enviar" type="submit"><i class="fa-solid fa-arrow-right-to-bracket"></i> Iniciar Sesión</button>
+  <button class="boton_cancelar" routerLink="/portfolio"><i class="fa-regular fa-circle-xmark"></i> Volver</button>
 </form>
+

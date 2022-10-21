@@ -1,0 +1,35 @@
+<div *ngIf="pers">
+    <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+
+        <div>
+            <label class="label" for="nombre">Nombre</label>
+            <input class="input" type="text" id="nombre" name="nombre" [(ngModel)]="pers.nombre" required>
+        </div>
+
+        <div>
+            <label class="label" for="apellido">Apellido</label>
+            <input class="input" type="text" id="apellido" name="apellido" [(ngModel)]="pers.apellido" required>
+        </div>
+
+        <div>
+            <label class="label" for="img"><i class="fa-solid fa-link"></i>Enlace de la imagen</label>
+            <input class="input" type="text" id="img" name="img" [(ngModel)]="pers.img" required>
+        </div>
+
+        <div>
+            <label class="label" for="titulo">Título</label>
+            <input class="input" type="text" id="titulo" name="titulo" [(ngModel)]="pers.titulo" required>
+        </div>
+
+        <div>
+            <label class="label" for="descripcion">Descripción</label>
+            <textarea class="input" type="text" id="descripcion" name="descripcion" [(ngModel)]="pers.descripcion"
+            required placeholder="Soy..."> </textarea>
+        </div>
+
+        <button class="boton_editar"><i class="fa-solid fa-pen-to-square"></i>Editar</button>
+        <button routerLink="/portfolio" class="boton_cancelar"><i class="fa-regular fa-circle-xmark"></i>Cancelar</button>
+    </form>
+
+    
+</div>
