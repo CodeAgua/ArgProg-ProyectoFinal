@@ -1,19 +1,19 @@
 export class Projects {
   id?: number;
-  nombreP: string;
+  tituloP: string;
   descripcionP: string;
   demoP: string;
   repoP: string;
   urlimagenP: string;
 
   constructor(
-    nombreP: string,
+    tituloP: string,
     descripcionP: string,
     demoP: string,
     repoP: string,
     urlimagenP: string
   ) {
-    this.nombreP = nombreP;
+    this.tituloP = tituloP;
     this.descripcionP = descripcionP;
     this.demoP = demoP;
     this.repoP = repoP;
