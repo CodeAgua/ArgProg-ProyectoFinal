@@ -11,6 +11,8 @@
     <table class="tabla_experiencias">
         <tbody>
             <tr *ngFor="let Experiencia of exp">
+                <td class="exp_tituloE">{{Experiencia.tituloE}}</td>
+                <td class="exp_fecha">{{Experiencia.fechaE}}</td>
                 <td class="exp_nombre">{{Experiencia.nombreE}}</td>
                 <td class="exp_descrp">{{Experiencia.descripcionE}}</td>
                 <td *ngIf="isLogged">

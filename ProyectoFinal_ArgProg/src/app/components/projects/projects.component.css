@@ -1,39 +1,39 @@
 .proyectos_titulo {
-    font-size: 1.4em;
-    font-family: "Barlow", sans-serif;
-    font-weight: 700;
-    margin: 0.2em;
-    padding: 0.1em;
-    text-align: center;
+  font-size: 1.4em;
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  margin: 0.2em;
+  padding: 0.1em;
+  text-align: center;
 }
 
 .proyectos_nombre {
-    font-size: 1.4em;
-    font-family: "Barlow", sans-serif;
-    font-weight: 300;
-    margin: 0.2em;
-    padding: 0.1em;
-    text-align: center;
+  font-size: 1.4em;
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
+  margin: 0.2em;
+  padding: 0.1em;
+  text-align: center;
 }
 
 .proyectos_descripcion {
-    font-size: 1.1em;
-    font-family: "Barlow", sans-serif;
-    font-weight: 300;
-    margin: 0.2em;
-    padding: 0.1em;
-    text-align: justify;
-    text-indent: 1em;
-    line-height: 1.5em;
+  font-size: 1.1em;
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
+  margin: 0.2em;
+  padding: 0.1em;
+  text-align: justify;
+  text-indent: 1em;
+  line-height: 1.5em;
 }
 
 .proyectos_captura {
-    display: flex;
-    align-items: center;
-    box-shadow: 10px 10px 20px rgb(216, 104, 0);
+  display: flex;
+  align-items: center;
+  box-shadow: 10px 10px 20px rgb(216, 104, 0);
 }
 
-.proyectos_demo{
+.proyectos_demo {
   margin-left: 0.4em;
   padding: 0.5em;
   font-size: 18px;
@@ -48,13 +48,13 @@
   cursor: pointer;
 }
 
-.proyectos_demo:hover { 
-    background: rgb(0, 102, 255);
-    transform: scale(1.1);
-    color: rgb(39, 39, 39);
+.proyectos_demo:hover {
+  background: rgb(0, 102, 255);
+  transform: scale(1.1);
+  color: rgb(39, 39, 39);
 }
 
-.proyectos_repo{
+.proyectos_repo {
   margin-left: 0.4em;
   padding: 0.5em;
   font-size: 18px;
@@ -70,11 +70,74 @@
 }
 
 .proyectos_repo:hover {
-    background: rgb(66, 180, 0);
-    transform: scale(1.1);
-    color: rgb(39, 39, 39);
+  background: rgb(66, 180, 0);
+  transform: scale(1.1);
+  color: rgb(39, 39, 39);
 }
 
 .proyectos_imagen {
-    width: 50%;
+  width: 50%;
+}
+
+.boton_agregar {
+  margin-left: 1.4em;
+  padding: 0.5em;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background: rgb(0, 162, 255);
+  border-radius: 10px;
+  border: none;
+  transition: 1s all;
+  cursor: pointer;
+}
+
+.boton_agregar:hover {
+  background: rgb(0, 102, 255);
+  transform: scale(1.1);
+  color: rgb(39, 39, 39);
+}
+
+.boton_editar {
+  margin-left: 1.4em;
+  padding: 0.5em;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background: rgb(0, 162, 255);
+  border-radius: 10px;
+  border: none;
+  transition: 1s all;
+  cursor: pointer;
+}
+
+.boton_editar:hover {
+  background: rgb(0, 102, 255);
+  transform: scale(1.1);
+  color: rgb(39, 39, 39);
+}
+
+.boton_borrar {
+  margin-left: 1.4em;
+  padding: 0.5em;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background: rgb(177, 9, 9);
+  border-radius: 10px;
+  border: none;
+  transition: 1s all;
+  cursor: pointer;
+}
+
+.boton_borrar:hover {
+  background: rgb(196, 0, 0);
+  transform: scale(1.1);
+  color: rgb(39, 39, 39);
 }

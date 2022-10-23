@@ -2,16 +2,28 @@
     <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
 
         <div>
-            <label class="nombre_edu" for="nombreE">Nombre de la Institución Educativa</label>
-            <input class="nombre_input" type="text" id="nombreE" name="nombreE" [(ngModel)]="edu.nombreE" required>
+            <label class="label" for="tituloE">Título conseguido</label>
+            <input class="input" type="text" id="tituloE" name="tituloE" [(ngModel)]="edu.tituloE" required>
         </div>
 
         <div>
-            <label class="descrp_edu" for="descripcionE">Descripción de la carrera o curso</label>
-            <input class="descrp_input" type="text" id="descripcionE" name="descripcionE" [(ngModel)]="edu.descripcionE" required>
+            <label class="label" for="fechaE">Periodo de tiempo en el que cursaste</label>
+            <input class="input" type="text" id="fechaE" name="fechaE" [(ngModel)]="edu.fechaE" required>
+        </div>
+
+        <div>
+            <label class="label" for="nombreE">Nombre de la Institución Educativa</label>
+            <input class="input" type="text" id="nombreE" name="nombreE" [(ngModel)]="edu.nombreE" required>
+        </div>
+
+        <div>
+            <label class="label" for="descripcionE">Descripción de la carrera o curso</label>
+            <textarea class="input" type="text" id="descripcionE" name="descripcionE" [(ngModel)]="edu.descripcionE"
+            placeholder="..." required>
+            </textarea>
         </div>
 
         <button class="boton_editar"><i class="fa-solid fa-pen-to-square"></i>Editar</button>
-
+        <button routerLink="/portfolio" class="boton_cancelar"><i class="fa-regular fa-circle-xmark"></i>Cancelar</button>
     </form>
 </div>

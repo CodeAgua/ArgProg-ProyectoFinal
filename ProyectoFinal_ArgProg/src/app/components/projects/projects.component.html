@@ -2,25 +2,38 @@
     <div>
         <h1 class="proyectos_titulo">Proyectos</h1>
     </div>
+
     <div>
-        <h2 class="proyectos_nombre">Encriptador de texto</h2>
-        <p class="proyectos_descripcion">
-            Un simple encriptador (y desencriptador). Escribir cualquier texto y apretar el
-            botón de encriptar. Para comprobar que funciona bien, apretar el botón de copiar texto y luego intentar
-            desencriptarlo. 
-            Terminado el 04/05/2022. 
-            Construido con HTML, CSS y JS.
-        </p>
+        <button class="boton_agregar" routerLink="/newproject" *ngIf="isLogged"><i class="fa-solid fa-plus"></i>
+            Nuevo Proyecto</button>
     </div>
-    <div class="proyectos_captura">
-            <button onclick="window.open('https://codeagua.github.io/Alura-Challenge-Oracle-ONE-Encriptador-de-Texto/');"
-            class="proyectos_demo"><i class="fa-solid fa-link"></i>Demo</button>
 
-            <button onclick="window.open('https://github.com/CodeAgua/Alura-Challenge-Oracle-ONE-Encriptador-de-Texto');"
-            class="proyectos_repo"><i class="fa-brands fa-github"></i> Repositorio</button>
+    <table class="tabla_proyectos">
+        <tbody>
+            <tr *ngFor="let Proyecto of proy">
+                <td class="proyectos_nombre">{{Proyecto.tituloP}}</td>
+                <td class="proyectos_descripcion">{{Proyecto.descripcionP}}</td>
+
+                <div class="proyectos_captura">
+                    <button onclick="window.open();"
+                        class="proyectos_demo"><i class="fa-solid fa-link"></i>Demo</button>
             
-            <img class="proyectos_imagen" src="../../../assets/encriptadorTexto.png"
-                alt="Captura de pantalla del encriptador de texto">
-    </div>
+                    <button onclick="window.open();"
+                        class="proyectos_repo"><i class="fa-brands fa-github"></i> Repositorio</button>
+            
+                    <img class="proyectos_imagen" src={{Proyecto.urlimagenP}}
+                        alt="Captura de pantalla del proyecto">
+                </div>
 
+                <td *ngIf="isLogged">
+                    <button class="boton_editar" routerLink="/editproject/{{Proyecto.id}}">
+                        <i class="fa-solid fa-pen-to-square"></i>Editar</button>
+                </td>
+                <td *ngIf="isLogged">
+                    <button class="boton_borrar" (click)="delete(Proyecto.id)">
+                        <i class="fa-solid fa-trash"></i>Borrar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </section>

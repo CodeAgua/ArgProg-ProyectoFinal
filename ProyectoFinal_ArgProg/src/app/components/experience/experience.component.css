@@ -13,6 +13,24 @@
   flex-wrap: wrap;
 }
 
+.exp_tituloE {
+  font-size: 1.2em;
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
+  margin: 0.2em;
+  padding: 0.1em;
+  text-align: center;
+}
+
+.exp_fecha {
+  font-size: 1.2em;
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
+  margin: 0.2em;
+  padding: 0.1em;
+  text-align: center;
+}
+
 .exp_nombre {
   font-size: 1.4em;
   font-family: "Barlow", sans-serif;

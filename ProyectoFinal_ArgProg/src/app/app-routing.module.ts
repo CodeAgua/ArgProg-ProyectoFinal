@@ -8,6 +8,8 @@ import { EditExperienciaComponent } from './components/experience/edit-experienc
 import { NuevaExperienciaComponent } from './components/experience/nueva-experiencia.component';
 import { LoginscreenComponent } from './components/loginscreen/loginscreen.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { EditprojectComponent } from './components/projects/editproject.component';
+import { NewprojectComponent } from './components/projects/newproject.component';
 import { EditSkillComponent } from './components/skills/edit-skill.component';
 import { NewSkillComponent } from './components/skills/new-skill.component';
 
@@ -22,6 +24,8 @@ const routes: Routes = [
   {path: 'editskill/:id', component:EditSkillComponent},
   {path: 'editbanner/:id', component:EditBannerComponent},
   {path: 'editabout/:id', component:EditaboutComponent},
+  {path: 'newproject/:id', component:NewprojectComponent},
+  {path: 'editproject/:id', component:EditprojectComponent},
   {path: '', redirectTo:'login', pathMatch:'full'}
 ];
 

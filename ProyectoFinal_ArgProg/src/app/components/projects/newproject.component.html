@@ -1,0 +1,37 @@
+<div>
+    <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+
+        <div>
+            <label class="label" for="tituloP">Nombre del proyecto</label>
+            <input class="input" type="text" id="tituloP" name="tituloP" [(ngModel)]="tituloP" required>
+        </div>
+
+        <div>
+            <label class="label" for="descripcionP">Descripción</label>
+            <textarea class="input" type="text" id="descripcionP" name="descripcionP" [(ngModel)]="descripcionP"
+                required placeholder="..."> </textarea>
+        </div>
+
+        <div>
+            <label class="label" for="demoP">Enlace a su demo</label>
+            <input class="input" type="text" id="demoP" name="demoP" [(ngModel)]="demoP"
+                required>
+        </div>
+
+        <div>
+            <label class="label" for="repoP">Enlace a su repo</label>
+            <input class="input" type="text" id="repoP" name="repoP" [(ngModel)]="repoP"
+                required>
+        </div>
+
+        <div>
+            <label class="label" for="urlimagenP">Enlace a imagen del proyecto</label>
+            <input class="input" type="text" id="urlimagenP" name="urlimagenP" [(ngModel)]="urlimagenP"
+                required>
+        </div>
+
+        <button class="boton_editar"><i class="fa-solid fa-pen-to-square"></i>Editar</button>
+        <button routerLink="/portfolio" class="boton_cancelar"><i
+                class="fa-regular fa-circle-xmark"></i>Cancelar</button>
+    </form>
+</div>

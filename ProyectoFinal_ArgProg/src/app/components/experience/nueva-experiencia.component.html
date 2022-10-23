@@ -2,16 +2,28 @@
     <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
 
         <div>
-            <label class="nombre_exp" for="nombreE">Nombre de la empresa</label>
-            <input class="nombre_input" type="text" id="nombreE" name="nombreE" [(ngModel)]="nombreE" required>
+            <label class="label" for="tituloE">Puesto/Rol</label>
+            <input class="input" type="text" id="tituloE" name="tituloE" [(ngModel)]="tituloE" required>
         </div>
 
         <div>
-            <label class="descrp_exp" for="descripcionE">Descripción de la tarea</label>
-            <input class="descrp_input" type="text" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE" required>
+            <label class="label" for="fechaE">Periodo de tiempo en el que trabajaste</label>
+            <input class="input" type="text" id="fechaE" name="fechaE" [(ngModel)]="fechaE" required>
+        </div>
+
+        <div>
+            <label class="label" for="nombreE">Nombre de la Empresa</label>
+            <input class="input" type="text" id="nombreE" name="nombreE" [(ngModel)]="nombreE" required>
+        </div>
+
+        <div>
+            <label class="label" for="descripcionE">Descripción del trabajo</label>
+            <textarea class="input" type="text" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE"
+                placeholder="..." required>
+            </textarea>
         </div>
 
         <button class="boton_agregar"><i class="fa-solid fa-plus"></i>Agregar</button>
-
+        <button routerLink="/portfolio" class="boton_cancelar"><i class="fa-regular fa-circle-xmark"></i>Cancelar</button>
     </form>
 </div>

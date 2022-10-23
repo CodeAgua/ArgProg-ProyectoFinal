@@ -11,6 +11,8 @@
     <table class="tabla_educaciones">
         <tbody>
             <tr *ngFor="let Educacion of edu">
+                <td class="edu_tituloE">{{Educacion.tituloE}}</td>
+                <td class="edu_fecha">{{Educacion.fechaE}}</td>
                 <td class="edu_nombre">{{Educacion.nombreE}}</td>
                 <td class="edu_descrp">{{Educacion.descripcionE}}</td>
                 <td *ngIf="isLogged">

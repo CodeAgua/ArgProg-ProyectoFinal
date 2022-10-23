@@ -9,6 +9,8 @@ import { EducacionService } from 'src/app/servicios/educacion.service';
   styleUrls: ['./nueva-educacion.component.css'],
 })
 export class NuevaEducacionComponent implements OnInit {
+  tituloE: string = '';
+  fechaE: string = '';
   nombreE: string = '';
   descripcionE: string = '';
 
@@ -20,7 +22,7 @@ export class NuevaEducacionComponent implements OnInit {
   ngOnInit(): void {}
 
   onCreate(): void {
-    const edu = new Educacion(this.nombreE, this.descripcionE);
+    const edu = new Educacion(this.tituloE, this.fechaE, this.nombreE, this.descripcionE);
     this.educacionServ.save(edu).subscribe(
       (data) => {
         alert("Educación añadida correctamente.");
