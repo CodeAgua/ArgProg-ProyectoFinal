@@ -30,7 +30,6 @@
 .proyectos_captura {
   display: flex;
   align-items: center;
-  box-shadow: 10px 10px 20px rgb(216, 104, 0);
 }
 
 .proyectos_demo {
@@ -76,7 +75,7 @@
 }
 
 .proyectos_imagen {
-  width: 50%;
+  width: 100%;
 }
 
 .boton_agregar {

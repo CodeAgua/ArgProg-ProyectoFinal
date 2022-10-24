@@ -23,14 +23,14 @@ export class NewprojectComponent implements OnInit {
   ngOnInit(): void {}
 
   onCreate(): void {
-    const edu = new Projects(this.tituloP, this.descripcionP, this.demoP, this.repoP, this.urlimagenP);
-    this.proyserv.save(edu).subscribe(
+    const proy = new Projects(this.tituloP, this.descripcionP, this.demoP, this.repoP, this.urlimagenP);
+    this.proyserv.save(proy).subscribe(
       (data) => {
-        alert("Educación añadida correctamente.");
+        alert("Proyecto añadido correctamente.");
         this.router.navigate(['/portfolio']);
       },
       (err) => {
-        alert("No se pudo añadir la educación.");
+        alert("No se pudo añadir el proyecto.");
         this.router.navigate(['/portfolio']);
       }
     );

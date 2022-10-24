@@ -16,7 +16,7 @@
   text-align: left;
 }
 
-.boton_editar {
+.boton_agregar {
   margin-left: 1.4em;
   padding: 0.5em;
   font-size: 18px;
@@ -31,7 +31,7 @@
   cursor: pointer;
 }
 
-.boton_editar:hover {
+.boton_agregar:hover {
   background: rgb(0, 102, 255);
   transform: scale(1.1);
   color: rgb(39, 39, 39);

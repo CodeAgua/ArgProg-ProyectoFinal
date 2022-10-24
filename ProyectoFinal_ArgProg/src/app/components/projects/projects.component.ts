@@ -6,15 +6,15 @@ import { TokenService } from 'src/app/servicios/token.service';
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.css']
+  styleUrls: ['./projects.component.css'],
 })
 export class ProjectsComponent implements OnInit {
-  proy: Projects[] = []
+  proy: Projects[] = [];
 
   constructor(
     private proyserv: ProjectsService,
     private tokenServ: TokenService
-  ) { }
+  ) {}
 
   isLogged = false;
 
@@ -34,8 +34,6 @@ export class ProjectsComponent implements OnInit {
     });
   }
 
-  
-
   delete(id?: number) {
     if (id != undefined) {
       this.proyserv.delete(id).subscribe(
@@ -43,7 +41,7 @@ export class ProjectsComponent implements OnInit {
           this.cargarProyecto();
         },
         (err) => {
-          alert("No se pudo borrar el proyecto.");
+          alert('No se pudo borrar el proyecto.');
         }
       );
     }

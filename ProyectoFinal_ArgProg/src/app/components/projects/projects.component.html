@@ -15,14 +15,16 @@
                 <td class="proyectos_descripcion">{{Proyecto.descripcionP}}</td>
 
                 <div class="proyectos_captura">
-                    <button onclick="window.open();"
-                        class="proyectos_demo"><i class="fa-solid fa-link"></i>Demo</button>
-            
-                    <button onclick="window.open();"
-                        class="proyectos_repo"><i class="fa-brands fa-github"></i> Repositorio</button>
-            
-                    <img class="proyectos_imagen" src={{Proyecto.urlimagenP}}
-                        alt="Captura de pantalla del proyecto">
+                    <td><button class="proyectos_demo"><i class="fa-solid fa-link"></i>
+                            <a rel="noreferrer" href="{{Proyecto.demoP}}" target="_blank">Demo</a></button>
+                    </td>
+
+                    <td><button class="proyectos_repo"><i class="fa-brands fa-github"></i>
+                            <a rel="noreferrer" href="{{Proyecto.repoP}}" target="_blank">Repositorio</a></button>
+                    </td>
+
+                    <td><img class="proyectos_imagen" src={{Proyecto.urlimagenP}}
+                            alt="Captura de pantalla del proyecto"></td>
                 </div>
 
                 <td *ngIf="isLogged">

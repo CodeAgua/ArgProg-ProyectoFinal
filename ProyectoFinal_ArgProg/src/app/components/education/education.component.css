@@ -14,9 +14,9 @@
 }
 
 .edu_tituloE {
-  font-size: 1.2em;
+  font-size: 1.4em;
   font-family: "Barlow", sans-serif;
-  font-weight: 300;
+  font-weight: 700;
   margin: 0.2em;
   padding: 0.1em;
   text-align: center;
@@ -110,17 +110,4 @@
   background: rgb(196, 0, 0);
   transform: scale(1.1);
   color: rgb(39, 39, 39);
-}
-
-.educacion {
-  font-size: 1.2em;
-  font-family: "Barlow", sans-serif;
-  font-weight: 300;
-  margin: 0.2em;
-  padding: 0.1em;
-  text-align: left;
-}
-
-.educacion_item {
-  list-style: none;
 }

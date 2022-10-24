@@ -24,7 +24,7 @@ const routes: Routes = [
   {path: 'editskill/:id', component:EditSkillComponent},
   {path: 'editbanner/:id', component:EditBannerComponent},
   {path: 'editabout/:id', component:EditaboutComponent},
-  {path: 'newproject/:id', component:NewprojectComponent},
+  {path: 'newproject', component:NewprojectComponent},
   {path: 'editproject/:id', component:EditprojectComponent},
   {path: '', redirectTo:'login', pathMatch:'full'}
 ];
