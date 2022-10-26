@@ -24,7 +24,7 @@ export class LoginscreenComponent implements OnInit {
     private tokenService: TokenService,
     private authService: AuthService,
     private router: Router,
-    private formBuild: FormBuilder,
+    private formBuild: FormBuilder
   ) {
     this.form = this.formBuild.group({
       nombreUsuario: ['', [Validators.required, Validators.minLength(1)]],

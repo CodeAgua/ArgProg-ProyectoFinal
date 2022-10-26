@@ -4,7 +4,8 @@
   display: flex;
   justify-content: space-between;
   padding: 0.2em;
-  margin-bottom: 0.8em;
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
   width: auto;
   height: 55px;
   box-shadow: inset;
@@ -57,7 +58,8 @@
 }
 
 .header_boton__login {
-  margin-left: 1.4em;
+  margin-left: 1.2em;
+  margin-right: 0.8em;
   padding: 0.5em;
   font-size: 18px;
   font-family: "Poppins", sans-serif;

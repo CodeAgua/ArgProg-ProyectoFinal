@@ -3,39 +3,34 @@
         <h1 class="proyectos_titulo">Proyectos</h1>
     </div>
 
-    <div>
+    <div class="div_boton">
         <button class="boton_agregar" routerLink="/newproject" *ngIf="isLogged"><i class="fa-solid fa-plus"></i>
             Nuevo Proyecto</button>
     </div>
 
-    <table class="tabla_proyectos">
-        <tbody>
-            <tr *ngFor="let Proyecto of proy">
-                <td class="proyectos_nombre">{{Proyecto.tituloP}}</td>
-                <td class="proyectos_descripcion">{{Proyecto.descripcionP}}</td>
+    <div class="div-proyecto" *ngFor="let Proyecto of proy">
 
-                <div class="proyectos_captura">
-                    <td><button class="proyectos_demo"><i class="fa-solid fa-link"></i>
-                            <a rel="noreferrer" href="{{Proyecto.demoP}}" target="_blank">Demo</a></button>
-                    </td>
+        <div>
+            <p class="proyectos_nombre">{{Proyecto.tituloP}}</p>
+            <p class="proyectos_descripcion">{{Proyecto.descripcionP}}</p>
+        </div>
 
-                    <td><button class="proyectos_repo"><i class="fa-brands fa-github"></i>
-                            <a rel="noreferrer" href="{{Proyecto.repoP}}" target="_blank">Repositorio</a></button>
-                    </td>
+        <div class="proyectos_captura">
+            <button class="proyectos_demo"><i class="fa-solid fa-link"></i>
+                <a rel="noreferrer" href="{{Proyecto.demoP}}" target="_blank">Demo</a></button>
 
-                    <td><img class="proyectos_imagen" src={{Proyecto.urlimagenP}}
-                            alt="Captura de pantalla del proyecto"></td>
-                </div>
+            <button class="proyectos_repo"><i class="fa-brands fa-github"></i>
+                <a rel="noreferrer" href="{{Proyecto.repoP}}" target="_blank">Repositorio</a></button>
 
-                <td *ngIf="isLogged">
-                    <button class="boton_editar" routerLink="/editproject/{{Proyecto.id}}">
-                        <i class="fa-solid fa-pen-to-square"></i>Editar</button>
-                </td>
-                <td *ngIf="isLogged">
-                    <button class="boton_borrar" (click)="delete(Proyecto.id)">
-                        <i class="fa-solid fa-trash"></i>Borrar</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+            <img class="proyectos_imagen" src={{Proyecto.urlimagenP}} alt="Captura de pantalla del proyecto">
+        </div>
+
+        <div class="div_boton" *ngIf="isLogged">
+            <button class="boton_editar" routerLink="/editproject/{{Proyecto.id}}">
+                <i class="fa-solid fa-pen-to-square"></i>Editar</button>
+            <button class="boton_borrar" (click)="delete(Proyecto.id)">
+                <i class="fa-solid fa-trash"></i>Borrar</button>
+        </div>
+
+    </div>
 </section>
