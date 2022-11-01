@@ -1,14 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
 import { Projects } from '../model/projects';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProjectsService {
-  url= environment.url + 'proyectos/';
+  url='https://portfolioprmap.herokuapp.com/proyectos/';
 
   constructor(private httpClient : HttpClient)  { }
 

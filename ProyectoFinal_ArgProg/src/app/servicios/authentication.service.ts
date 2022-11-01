@@ -9,15 +9,15 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
   providedIn: 'root'
 })
 export class AuthService {
-  authUrl = 'http://localhost:8080/auth';
+  url ='https://portfolioprmap.herokuapp.com/auth';
 
   constructor(private httpC: HttpClient) { }
 
  public nuevo(nuevoUsuario: NuevoUsuario): Observable<any>{
-   return this.httpC.post<any>(this.authUrl + '/nuevo', nuevoUsuario);
+   return this.httpC.post<any>(this.url + '/nuevo', nuevoUsuario);
  }
 
  public login(loginUsuario: LoginUsuario): Observable<JwtDto>{
-   return this.httpC.post<JwtDto>(this.authUrl + '/login', loginUsuario)
+   return this.httpC.post<JwtDto>(this.url + '/login', loginUsuario)
  }
 }
