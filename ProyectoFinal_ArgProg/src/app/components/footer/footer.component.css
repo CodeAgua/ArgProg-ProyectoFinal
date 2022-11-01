@@ -3,7 +3,10 @@
     width: auto;
     height: 50px;
     justify-content: flex-end;
-    margin-top: 1em;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
 }
 
 .footer_texto {

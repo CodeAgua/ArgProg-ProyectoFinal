@@ -1,10 +1,10 @@
-<section>
+<section class="div-caja">
     <div>
         <h1 class="proyectos_titulo">Proyectos</h1>
     </div>
 
-    <div class="div_boton">
-        <button class="boton_agregar" routerLink="/newproject" *ngIf="isLogged"><i class="fa-solid fa-plus"></i>
+    <div class="div_boton" *ngIf="isLogged">
+        <button class="boton_agregar" routerLink="/newproject" ><i class="fa-solid fa-plus"></i>
             Nuevo Proyecto</button>
     </div>
 
@@ -20,7 +20,7 @@
                 <a rel="noreferrer" href="{{Proyecto.demoP}}" target="_blank">Demo</a></button>
 
             <button class="proyectos_repo"><i class="fa-brands fa-github"></i>
-                <a rel="noreferrer" href="{{Proyecto.repoP}}" target="_blank">Repositorio</a></button>
+                <a rel="noreferrer" href="{{Proyecto.repoP}}" target="_blank">Repo</a></button>
 
             <img class="proyectos_imagen" src={{Proyecto.urlimagenP}} alt="Captura de pantalla del proyecto">
         </div>

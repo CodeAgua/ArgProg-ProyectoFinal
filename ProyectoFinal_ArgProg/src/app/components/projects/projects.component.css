@@ -1,8 +1,13 @@
+.div-caja {
+  margin: 2em;
+}
+
 .proyectos_titulo {
   font-size: 1.4em;
   font-family: "Barlow", sans-serif;
   font-weight: 700;
   margin: 0.2em;
+  margin-top: 2em;
   padding: 0.1em;
   text-align: center;
 }
@@ -28,12 +33,13 @@
   margin: 0.2em;
   padding: 0.1em;
   text-align: justify;
-  text-indent: 1em;
   line-height: 1.5em;
 }
 
 .proyectos_captura {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -44,8 +50,6 @@
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   text-align: center;
-  color: rgb(0, 0, 0);
-  background: rgb(236, 232, 0);
   border-radius: 10px;
   border: none;
   transition: 1s all;
@@ -53,9 +57,7 @@
 }
 
 .proyectos_demo:hover {
-  background: rgb(207, 204, 0);
   transform: scale(1.1);
-  color: rgb(39, 39, 39);
 }
 
 .proyectos_repo {
@@ -65,8 +67,6 @@
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   text-align: center;
-  color: rgb(0, 0, 0);
-  background: rgb(74, 201, 0);
   border-radius: 10px;
   border: none;
   transition: 1s all;
@@ -74,19 +74,17 @@
 }
 
 .proyectos_repo:hover {
-  background: rgb(66, 180, 0);
   transform: scale(1.1);
-  color: rgb(39, 39, 39);
 }
 
 .proyectos_imagen {
-  margin-left: 0.4em;
-  width: 50%;
+  margin-left: 0.2em;
+  width: 60%;
 }
 
 .div_boton {
-  margin-top: 0.4em;
-  margin-bottom: 0.4em;
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
   display: flex;
   justify-content: center;
 }
@@ -99,7 +97,6 @@
   font-weight: 400;
   text-align: center;
   color: rgb(0, 0, 0);
-  background: rgb(0, 162, 255);
   border-radius: 10px;
   border: none;
   transition: 1s all;
@@ -107,7 +104,7 @@
 }
 
 .boton_agregar:hover {
-  background: rgb(0, 102, 255);
+  background: rgb(80, 191, 255);
   transform: scale(1.1);
   color: rgb(39, 39, 39);
 }
@@ -120,7 +117,6 @@
   font-weight: 400;
   text-align: center;
   color: rgb(0, 0, 0);
-  background: rgb(0, 162, 255);
   border-radius: 10px;
   border: none;
   transition: 1s all;
@@ -128,7 +124,7 @@
 }
 
 .boton_editar:hover {
-  background: rgb(0, 102, 255);
+  background: rgb(80, 191, 255);
   transform: scale(1.1);
   color: rgb(39, 39, 39);
 }
@@ -141,7 +137,6 @@
   font-weight: 400;
   text-align: center;
   color: rgb(0, 0, 0);
-  background: rgb(177, 9, 9);
   border-radius: 10px;
   border: none;
   transition: 1s all;
@@ -149,7 +144,26 @@
 }
 
 .boton_borrar:hover {
-  background: rgb(196, 0, 0);
+  background: rgb(255, 122, 122);
   transform: scale(1.1);
   color: rgb(39, 39, 39);
+}
+
+@media only screen and (max-width: 600px) {
+  .proyectos_imagen {
+    margin: 0.3em;
+    width: 100%;
+  }
+
+  .div-caja {
+    margin: 0.5em;
+  }
+
+  .proyectos_demo{
+    margin: 1em;
+  }
+
+  .proyectos_demo {
+    margin: 1em;
+  }
 }

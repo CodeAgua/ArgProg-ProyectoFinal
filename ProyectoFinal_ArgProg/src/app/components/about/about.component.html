@@ -1,12 +1,7 @@
+<div class="div-caja">
 <div class="about">
-
-    <div *ngIf="isLogged">
-        <button class="boton_editar" routerLink="/editabout/1">
-            <i class="fa-solid fa-pen-to-square"></i>Editar</button>
-    </div>
-
-    <div>
-        <img class="about_fotop" src={{persona.img}} alt="Foto personal para presentación">
+    <div class="about_foto">
+        <img class="about_foto__perfil" src={{persona.img}} alt="Foto personal para presentación">
     </div>
     <div *ngIf="persona" class="about_nombre-titulo">
         <p class="about_nombre">{{persona.nombre}} {{persona.apellido}}</p>
@@ -18,4 +13,10 @@
             <p class="about_info">{{persona.descripcion}}</p>
         </span>
     </div>
+</div>
+
+<div class="div_boton" *ngIf="isLogged">
+    <button class="boton_editar" routerLink="/editabout/1">
+        <i class="fa-solid fa-pen-to-square"></i>Editar</button>
+</div>
 </div>

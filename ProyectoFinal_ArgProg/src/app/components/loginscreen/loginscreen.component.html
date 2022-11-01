@@ -1,4 +1,8 @@
-<h1 class="login_titulo">Iniciar Sesión</h1>
+<div class="div-caja">
+<div class="div-titulo">
+  <h1 class="login_titulo">Iniciar Sesión</h1>
+</div>
+
 <form [formGroup]="form" #f="ngForm" (ngSubmit)="onLogin()" class="form">
 
   <div class="form_cuadro">
@@ -31,4 +35,4 @@
   <button class="form_enviar" type="submit"><i class="fa-solid fa-arrow-right-to-bracket"></i> Iniciar Sesión</button>
   <button class="boton_cancelar" routerLink="/portfolio"><i class="fa-regular fa-circle-xmark"></i> Volver</button>
 </form>
-
+</div>

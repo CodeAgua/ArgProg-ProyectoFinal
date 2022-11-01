@@ -1,3 +1,7 @@
+.div-caja {
+  margin: 2em;
+}
+
 .skills_titulo {
   font-size: 1.4em;
   font-family: "Barlow", sans-serif;
@@ -7,20 +11,33 @@
   text-align: center;
 }
 
+.div_boton {
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
+  display: flex;
+  justify-content: center;
+}
+
 .skills {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  width: auto;
-  align-items: center;
 }
 
 .skills_box {
-  width: 32%;
-  margin: 0.2em;
-  padding: 0.2em;
+  width: auto;
+  margin: 2em;
+  padding: 0.3em;
 }
 
-.boton_agregar__skl {
+.skills_circle {
+  text-align: center;
+  font-size: 1.1em;
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
+}
+
+.boton_agregar {
   margin-left: 1.4em;
   padding: 0.5em;
   font-size: 18px;
@@ -28,57 +45,71 @@
   font-weight: 400;
   text-align: center;
   color: rgb(0, 0, 0);
-  background: rgb(0, 162, 255);
   border-radius: 10px;
   border: none;
   transition: 1s all;
   cursor: pointer;
 }
 
-.boton_agregar__skl:hover {
-  background: rgb(0, 102, 255);
+.boton_agregar:hover {
+  background: rgb(80, 191, 255);
   transform: scale(1.1);
   color: rgb(39, 39, 39);
 }
 
-.boton_editar__skl {
-  margin-left: 1.4em;
-  padding: 0.5em;
-  font-size: 18px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  text-align: center;
-  color: rgb(0, 0, 0);
-  background: rgb(0, 162, 255);
+.boton_editar {
+  margin-left: 1em;
+  padding: 0.6em;
   border-radius: 10px;
   border: none;
   transition: 1s all;
   cursor: pointer;
 }
 
-.boton_editar__skl:hover {
-  background: rgb(0, 102, 255);
+.boton_editar:hover {
+  background: rgb(80, 191, 255);
   transform: scale(1.1);
-  color: rgb(39, 39, 39);
 }
 
-.boton_borrar__skl {
-  margin-left: 1.4em;
-  padding: 0.5em;
-  font-size: 18px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  text-align: center;
-  color: rgb(0, 0, 0);
-  background: rgb(177, 9, 9);
+.boton_borrar {
+  margin-left: 1em;
+  padding: 0.6em;
   border-radius: 10px;
   border: none;
   transition: 1s all;
   cursor: pointer;
 }
 
-.boton_borrar__skl:hover {
-  background: rgb(196, 0, 0);
+.boton_borrar:hover {
+  background: rgb(255, 122, 122);
   transform: scale(1.1);
-  color: rgb(39, 39, 39);
+}
+
+@media only screen and (max-width: 600px) {
+  .botones_skill {
+    margin: 1.2em;
+    display: flex;
+  }
+
+  .boton_editar {
+    margin: 0.3em;
+    padding: 0.7em;
+    display:block;
+  }
+
+  .boton_borrar {
+    margin: 0.3em;
+    padding: 0.7em;
+    display:block;
+  }
+
+  .div-caja {
+    margin: 0em;
+  }
+
+  .skills_box {
+    width: auto;
+    margin-top: 2em;
+    padding: 0.1em;
+  }
 }

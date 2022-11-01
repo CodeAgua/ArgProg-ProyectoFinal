@@ -1,32 +1,30 @@
-<section>
+<section class="div-caja">
     <div>
         <h1 class="skills_titulo">Hard + Soft Skills</h1>
     </div>
 
-    <div>
-        <button class="boton_agregar__skl" routerLink="/nuevaskill" *ngIf="isLogged"><i class="fa-solid fa-plus"></i>
+    <div class="div_boton" *ngIf="isLogged">
+        <button class="boton_agregar" routerLink="/nuevaskill" ><i class="fa-solid fa-plus"></i>
             Nueva Skill</button>
     </div>
 
-    <div class="skills" *ngFor="let skill of skill">
-        <div class="skills_box">
-            <circle-progress [responsive]="true" [class]="'skills_circle'" [imageSrc]="'../assets/HTML5.png'"
-                [imageHeight]="70" [imageWidth]="70" [showImage]="false" [showUnits]="false" [showSubtitle]="false"
+    <div class="skills">
+        <div class="skills_box" *ngFor="let skill of skill">
+
+            <circle-progress [responsive]="true" [class]="'skills_circle'" [imageSrc]="" [imageHeight]="70"
+                [imageWidth]="70" [showImage]="false" [showUnits]="false" [showSubtitle]="false"
                 [percent]="(skill.porcentaje)" [title]="(skill.nombre)" [showTitle]="true" [titleColor]="'#3B19DA'"
                 [titleFontSize]="'3em'" [radius]="100" [outerStrokeWidth]="12" [innerStrokeWidth]="4"
                 [outerStrokeColor]="'#78C000'" [innerStrokeColor]="'#C7E596'" [animation]="true"
                 [animationDuration]="800" [lazy]="true">
             </circle-progress>
 
-            <td *ngIf="isLogged">
-                <button class="boton_editar__skl" routerLink="/editskill/{{skill.id}}">
-                    <i class="fa-solid fa-pen-to-square"></i></button>
-            </td>
-
-            <td *ngIf="isLogged">
-                <button class="boton_borrar__skl" (click)="delete(skill.id)">
-                    <i class="fa-solid fa-trash"></i></button>
-            </td>
+            <div class="container justify-content botones_skill">
+            <button *ngIf="isLogged" class="boton_editar" routerLink="/editskill/{{skill.id}}">
+                <i class="fa-solid fa-pen-to-square"></i></button>
+            <button *ngIf="isLogged" class="boton_borrar" (click)="delete(skill.id)">
+                <i class="fa-solid fa-trash"></i></button>
+            </div>
         </div>
     </div>
 </section>

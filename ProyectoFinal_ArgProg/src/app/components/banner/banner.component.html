@@ -1,7 +1,9 @@
+<div>
 <div class="banner" *ngFor="let Banner of banner">
         <img class="banner_imagen" alt="Banner del portfolio" src={{Banner.urlimg}}>
 </div>
 
 <div class="div_boton" *ngIf="isLogged">
         <button class="boton_editar" routerLink="/editbanner/1"><i class="fa-solid fa-pen-to-square"></i>Banner</button>
+</div>
 </div>

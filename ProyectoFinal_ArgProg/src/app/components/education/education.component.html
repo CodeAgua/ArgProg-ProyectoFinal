@@ -1,29 +1,36 @@
-<section>
+<section class="div-caja">
     <div>
         <h1 class="educacion_titulo">Educación</h1>
     </div>
 
-    <div>
-        <button class="boton_agregar__edu" routerLink="/nuevaedu" *ngIf="isLogged"><i class="fa-solid fa-plus"></i>
+    <div class="div_boton" *ngIf="isLogged">
+        <button class="boton_agregar" routerLink="/nuevaedu"><i class="fa-solid fa-plus"></i>
             Nueva Educación</button>
     </div>
 
-    <table class="tabla_educaciones">
-        <tbody>
-            <tr *ngFor="let Educacion of edu">
-                <td class="edu_tituloE">{{Educacion.tituloE}}</td>
-                <td class="edu_fecha">{{Educacion.fechaE}}</td>
-                <td class="edu_nombre">{{Educacion.nombreE}}</td>
-                <td class="edu_descrp">{{Educacion.descripcionE}}</td>
-                <td *ngIf="isLogged">
-                    <button class="boton_editar__edu" routerLink="/editedu/{{Educacion.id}}">
-                        <i class="fa-solid fa-pen-to-square"></i>Editar</button>
-                </td>
-                <td *ngIf="isLogged">
-                    <button class="boton_borrar__edu" (click)="delete(Educacion.id)">
-                        <i class="fa-solid fa-trash"></i>Borrar</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="educaciones" *ngFor="let Educacion of edu">
+        <div class="container text-center">
+            <div class="row justify-content-md-center">
+                <div class="col col-lg-2">
+                    <p class="edu_tituloE">{{Educacion.tituloE}}</p>
+                </div>
+                <div class="col col-lg-2">
+                    <p class="edu_fecha">{{Educacion.fechaE}}</p>
+                </div>
+                <div class="col col-lg-2">
+                    <p class="edu_nombre">{{Educacion.nombreE}}</p>
+                </div>
+                <div class="col-md-auto">
+                    <p class="edu_descrp">{{Educacion.descripcionE}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="isLogged">
+            <button class="boton_editar" routerLink="/editedu/{{Educacion.id}}">
+                <i class="fa-solid fa-pen-to-square"></i>Editar</button>
+            <button class="boton_borrar" (click)="delete(Educacion.id)">
+                <i class="fa-solid fa-trash"></i>Borrar</button>
+        </div>
+    </div>
 </section>

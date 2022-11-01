@@ -1,3 +1,7 @@
+.div-caja {
+  margin: 2em;
+}
+
 .experiencia_titulo {
   font-size: 1.4em;
   font-family: "Barlow", sans-serif;
@@ -7,10 +11,19 @@
   text-align: center;
 }
 
-.tabla_experiencias {
+.div_boton {
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
+  display: flex;
+  justify-content: center;
+}
+
+.experiencias {
   display: flex;
   width: auto;
   flex-wrap: wrap;
+  margin-top: 0.7em;
+  margin-bottom: 0.8em;
 }
 
 .exp_tituloE {
@@ -49,20 +62,7 @@
   text-align: center;
 }
 
-.experiencia {
-  font-size: 1.2em;
-  font-family: "Barlow", sans-serif;
-  font-weight: 300;
-  margin: 0.2em;
-  padding: 0.1em;
-  text-align: left;
-}
-
-.experiencia_item {
-  list-style: none;
-}
-
-.boton_agregar__exp {
+.boton_agregar {
   margin-left: 1.4em;
   padding: 0.5em;
   font-size: 18px;
@@ -70,20 +70,19 @@
   font-weight: 400;
   text-align: center;
   color: rgb(0, 0, 0);
-  background: rgb(0, 162, 255);
   border-radius: 10px;
   border: none;
   transition: 1s all;
   cursor: pointer;
 }
 
-.boton_agregar__exp:hover {
-  background: rgb(0, 102, 255);
+.boton_agregar:hover {
+  background: rgb(80, 191, 255);
   transform: scale(1.1);
   color: rgb(39, 39, 39);
 }
 
-.boton_editar__exp {
+.boton_editar {
   margin-left: 1.4em;
   padding: 0.5em;
   font-size: 18px;
@@ -91,20 +90,19 @@
   font-weight: 400;
   text-align: center;
   color: rgb(0, 0, 0);
-  background: rgb(0, 162, 255);
   border-radius: 10px;
   border: none;
   transition: 1s all;
   cursor: pointer;
 }
 
-.boton_editar__exp:hover {
-  background: rgb(0, 102, 255);
+.boton_editar:hover {
+  background: rgb(80, 191, 255);
   transform: scale(1.1);
   color: rgb(39, 39, 39);
 }
 
-.boton_borrar__exp {
+.boton_borrar {
   margin-left: 1.4em;
   padding: 0.5em;
   font-size: 18px;
@@ -112,15 +110,20 @@
   font-weight: 400;
   text-align: center;
   color: rgb(0, 0, 0);
-  background: rgb(177, 9, 9);
   border-radius: 10px;
   border: none;
   transition: 1s all;
   cursor: pointer;
 }
 
-.boton_borrar__exp:hover {
-  background: rgb(196, 0, 0);
+.boton_borrar:hover {
+  background: rgb(255, 122, 122);
   transform: scale(1.1);
   color: rgb(39, 39, 39);
+}
+
+@media only screen and (max-width: 600px) {
+  .div-caja {
+    margin: 0.5em
+  }
 }
