@@ -45,7 +45,7 @@ Recomiendo usar Freeimagehost para subir imágenes. Una vez creada tu cuenta pon
 <br><sub>CodeAgua</sub>](https://github.com/CodeAgua)
 
 ## 📄 Licencia
-Este proyecto está bajo la licencia GNU General Public License v3.0 - mira el archivo [LICENSE.md](LICENSE.md) para más detalles.
+Este proyecto está bajo la licencia GNU General Public License v3.0 - mira el archivo [LICENSE](LICENSE) para más detalles.
 
 ## 🎁 Agradecimientos
 A Argentina Programa por darme la oportunidad de iniciarme en este mundo tan complejo.
