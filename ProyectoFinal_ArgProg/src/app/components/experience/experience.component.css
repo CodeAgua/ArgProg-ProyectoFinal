@@ -18,6 +18,13 @@
   justify-content: center;
 }
 
+.div_botones {
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+  display: flex;
+  justify-content: center;
+}
+
 .experiencias {
   display: flex;
   width: auto;
@@ -124,6 +131,16 @@
 
 @media only screen and (max-width: 600px) {
   .div-caja {
-    margin: 0.5em
+    margin: 0.5em;
+  }
+
+  .boton_agregar {
+    margin-left: 0.6em;
+    padding: 0.4em;
+  }
+
+  .boton_editar {
+    margin-left: 0.6em;
+    padding: 0.4em;
   }
 }

@@ -3,8 +3,8 @@
         <h1 class="experiencia_titulo">Experiencia laboral</h1>
     </div>
 
-    <div class="div_boton">
-        <button class="boton_agregar" routerLink="/nuevaexp" *ngIf="isLogged"><i class="fa-solid fa-plus"></i>
+    <div class="div_boton" *ngIf="isLogged">
+        <button class="boton_agregar" routerLink="/nuevaexp" ><i class="fa-solid fa-plus"></i>
             Nueva Experiencia</button>
     </div>
 
@@ -26,7 +26,7 @@
             </div>
         </div>
 
-        <div *ngIf="isLogged">
+        <div class="div_botones" *ngIf="isLogged">
             <button class="boton_editar" routerLink="/editexp/{{Experiencia.id}}">
                 <i class="fa-solid fa-pen-to-square"></i>Editar</button>
             <button class="boton_borrar" (click)="delete(Experiencia.id)">

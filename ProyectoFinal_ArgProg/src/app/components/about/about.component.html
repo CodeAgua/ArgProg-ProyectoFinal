@@ -1,9 +1,9 @@
 <div class="div-caja">
-<div class="about">
+<div *ngIf="persona" class="about">
     <div class="about_foto">
         <img class="about_foto__perfil" src={{persona.img}} alt="Foto personal para presentación">
     </div>
-    <div *ngIf="persona" class="about_nombre-titulo">
+    <div class="about_nombre-titulo">
         <p class="about_nombre">{{persona.nombre}} {{persona.apellido}}</p>
         <p class="about_titulo">{{persona.titulo}}</p>
     </div>
